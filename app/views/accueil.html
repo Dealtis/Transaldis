@@ -1,0 +1,56 @@
+<section class="intro">
+  <div class="intro-body">
+    <video autoplay loop id="BG">
+      <source src="video/10149872.webm" type="video/webm"/>
+      <source src="video/10149872.mp4" type="video/mp4"/>
+    </video>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1 class="brand-heading">Transaldis</h1>
+        <p class="intro-text">Qui sommes nous ?</p>
+        <a du-smooth-scroll="content" du-smooth-scroll duration="500" class="btn btn-circle">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="content" class="content">
+  <section class="text-center content-section introtext row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+  </section>
+  <section class="text-center boxactuinfo row bggray">
+    <div class="col-lg-4 col-lg-offset-2 wow actuindex">
+      <div class="media" ng-repeat="actu in actus | limitTo:3">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" ng-src="admin/images/{{actu.actu_imgsrc}}" alt="imagestest">
+          </a>
+        </div>
+        <div class="media-body">
+          {{actu.actu_contenu}}
+          <a href="#">En savoir plus</a>
+        </div>
+        <hr ng-hide="$last">
+      </div>
+    </div>
+    <div class="col-lg-4 wow boxcontact">
+      <ul>
+        <li class="pad5">
+          <i class="fa fa-flag bgico"></i>&nbsp;Lorem ipsum</li>
+        <li class="pad5">
+          <i class="fa fa-home bgico"></i>&nbsp;Lorem ipsum</li>
+        <li class="pad5">
+          <i class="fa fa-globe bgico"></i>&nbsp;Lorem ipsum</li>
+      </ul>
+    </div>
+  </section>
+  <section class="row bggray box rsociaux">
+
+  </section>
+</section>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="App">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transaldis_Admin_Angular</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="..\assets\bower_components\bootstrap\dist\css\bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="..\assets\bower_components\bootstrap-fileinput\css\fileinput.min.css" media="screen" title="no title" charset="utf-8">
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="../assets/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<body ng-controller="ListActuController" >
+  <!--[if lt IE 10]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="container">
+    <ul class="nav nav-tabs nav-justified" id="TabsMenu">
+      <li role="presentation" class="active"><a href="#actu" aria-controls="actu" role="tab" data-toggle="tab">Actualité</a></li>
+      <li role="presentation"><a href="#annon" aria-controls="annon" role="tab" data-toggle="tab">Annonces</a></li>
+      <li role="presentation"><a href="#emp" aria-controls="emp" role="tab" data-toggle="tab">Emplois</a></li>
+    </ul>
+  </div>
+  <section class="container-fluid">
+    <!-- Tab panes -->
+    <div class="tab-content col-lg-8 col-lg-offset-2">
+      <div role="tabpanel" class="tab-pane active" id="actu">
+        <div class="row">
+          <div class="col-sm-4 col-md-4" ng-repeat="actu in actus">
+            <div class="thumbnail">
+              <img ng-src="images/{{actu.actu_imgsrc}}" alt="{{actu.actu_imgrc}}" />
+              <div class="caption">
+                <h3>{{actu.actu_titre}}</h3>
+                <p>{{actu.actu_contenu}}</p>
+                <button type="button" class="btn btn-success" name="button" >Modif</button>
+                <button class="btn btn-danger" type="button" name="button" ng-click="deleteActu(actu.actu_id,$index)">Supp</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Button trigger modal -->
+        <section class="container">
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onC>
+            Ajouter une actu
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                  <form name="ModalActuadd" ng-submit="ModalActuadd.$valid && addActu(actunew)" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="actutitre">Titre</label>
+                      <input  ng-model="actunew.actu_titre" type="text" class="form-control" id="actutitre" placeholder="Titre" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="actucontenu">Contenu</label>
+                      <textarea required class="form-control"id="actucontenu" name="name" ng-model="actunew.actu_contenu" rows="8" cols="40"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="actuauteur">Auteur</label>
+                      <input  required ng-model="actunew.actu_auteur" type="text" class="form-control" id="actuauteur" placeholder="Titre">
+                    </div>
+                    <div class="form-group">
+                      <input id="inputfile" custom-on-change="uploadFile" ng-model="actunew.actu_imgsrc" name="inputfile" type="file" multiple class="file-loading"  id="inputfile">
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submitModaladdActu" class="btn btn-primary">Save changes</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="annon">...</div>
+      <div role="tabpanel" class="tab-pane" id="emp">...</div>
+    </div>
+  </section>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="..\assets\bower_components\jquery\dist\jquery.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="..\assets\bower_components\bootstrap\dist\js\bootstrap.min.js" charset="utf-8"></script>
+    <script src="..\assets\bower_components\angular\angular.min.js" charset="utf-8"></script>
+    <script src="..\assets\bower_components\bootstrap-fileinput\js\fileinput.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- endbuild -->
+  </body>
+  </html>

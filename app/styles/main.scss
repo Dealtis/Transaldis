@@ -1,0 +1,556 @@
+// bower:scss
+@import "font-awesome/scss/font-awesome.scss";
+// endbower
+@import "_variables.scss";
+
+//GRAYSCALE
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Lato";
+    color: #000;
+    background-color: #fff;
+    //overflow:hidden;
+    overflow-x: hidden;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media(min-width:768px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+a {
+    color: #42dca3;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #1d9b6c;
+}
+
+.light {
+    font-weight: 400;
+}
+
+.navbar-custom {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: "Lato";
+    font-weight: 700;
+    background-color: #1D1D1B;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: rgba(255,255,255,.3);
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: #fff;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        background: #1D1D1B;
+    }
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+    //background: url(../images/intro-bg.jpg) no-repeat bottom center scroll;
+    /*background-color: #fff;*/
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // background-size: cover;
+    // -o-background-size: cover;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100vh;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 100px;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 26px;
+    }
+}
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 100%!important;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255,255,255,.1);
+}
+
+.btn-circle i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+}
+
+.btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.content-section {
+    padding-bottom: 50px;
+}
+
+.download-section {
+    width: 100%;
+    padding: 50px 0;
+    background: url(../images/bg1.jpg);
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.truck-section {
+  width: 100%;
+  padding: 50px 0;
+  background: url(../images/bg2.jpg);
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.contact-section {
+  width: 100%;
+  padding: 50px 0;
+  background: url(../images/bg3.jpg);
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+}
+
+@media(min-width:767px) {
+    .content-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .download-section {
+        padding: 50px 0;
+    }
+
+    .truck-section {
+        padding: 50px 0;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
+    }
+}
+h2{
+  color:#94BA65;
+}
+
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: "Lato";
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #42dca3;
+    color: #42dca3;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #42dca3;
+    outline: 0;
+    color: #000;
+    background-color: #42dca3;
+}
+
+ul.banner-social-buttons {
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+#tabscontent{
+  background-color: #4e4d4a;
+  padding: 50px;
+  margin-top: 5px;
+}
+#BG{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}
+.navbar-brand {
+  padding: 10px 15px;
+}
+
+#tabs{
+  padding-bottom: 5px;
+}
+
+.content-index{
+  background-color: white;
+}
+
+.boxcontact {
+  display: flex;
+  height: 270px;
+}
+
+.boxcontact ul{
+  list-style: none;
+  margin: auto;
+  font-size: 2em;
+}
+.pad5{
+      padding: 5px;
+}
+
+#top{
+  width: 100%;
+  height: 125px;
+  background: url(images/bg3.jpg) no-repeat center center scroll;
+      background-position-x: 0px !important;
+  background-color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.nav-pills>li{
+  background-color: #94BA65;
+  border-radius: 5px;
+}
+.nav-pills>li>a:hover{
+  background-color: gray;
+}
+.nav-pills>li.active>a{
+  background-color: #537841 !important;
+  }
+.nav-pills>li>a{
+  color:white;
+}
+
+
+//END GRAYSCALE
+.bggray {
+  background-color: $gray;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.media img {
+  width: 64px;
+  height: 64px;
+}
+footer {
+  margin-top: 50px;
+  background-color: $gray;
+  color: white;
+}
+.boxcontact i {
+  color: $green;
+}
+.bgico {
+  background-color: white;
+  border-radius: 50px;
+  padding: 15px;
+  border: solid;
+  border-color: gray;
+}
+.media-body {
+  color: white;
+  a {
+    color: $green;
+  }
+}
+#about {
+  margin-top: 75px;
+}
+/* Default view */
+.view {
+  transition: 300ms;
+}
+/* First animation*/
+.first .view.ng-enter {
+  left: -100%;
+}
+.first .view.ng-enter.ng-enter-active {
+  left: 0;
+}
+.first .view.ng-leave {
+  left: 0;
+}
+.first .view.ng-leave.ng-leave-active {
+  left: 100%;
+}
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+  background-color: gray;
+}
+.navbar ul.dropdown-menu li {
+    &:hover {
+        background-color: darkgray;
+    }
+  a {
+    &:hover {
+      color: black !important;
+
+    }
+  }
+}
+.content{
+  height: 100vh;
+  .introtext{
+      margin-top: 50px;
+  }
+  .rsociaux{
+    margin-top: 50px;
+  }
+}
