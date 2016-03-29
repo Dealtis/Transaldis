@@ -12,28 +12,28 @@ angular.module('transaldisAngularGruntApp')
             controller: 'ListActu'
         })
         .when('/solutions', {
-            templateUrl: 'views/solutions.html'
+            templateUrl: 'views/not.html'
         })
         .when('/devis', {
-            templateUrl: 'views/devis.html'
+            templateUrl: 'views/not.html'
         })
         .when('/suividelivraison', {
-            templateUrl: 'views/devis.html'
+            templateUrl: 'views/not.html'
         })
         .when('/entreprise', {
             templateUrl: 'views/entreprise.html'
         })
         .when('/nouvelles', {
-            templateUrl: 'views/entreprise.html'
+            templateUrl: 'views/not.html'
         })
         .when('/medias', {
-            templateUrl: 'views/entreprise.html'
+            templateUrl: 'views/not.html'
         })
         .when('/emplois', {
-            templateUrl: 'views/entreprise.html'
+            templateUrl: 'views/not.html'
         })
         .when('/contact', {
-            templateUrl: 'views/entreprise.html'
+            templateUrl: 'views/not.html'
         })
         .otherwise({
             redirectTo: '/home'
