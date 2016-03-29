@@ -7,6 +7,10 @@ angular.module('transaldisAngularGruntApp')
             templateUrl: 'views/accueil.html',
             controller: 'ListActu'
         })
+        .when('/home', {
+            templateUrl: 'views/accueil.html',
+            controller: 'ListActu'
+        })
         .when('/solutions', {
             templateUrl: 'views/solutions.html'
         })

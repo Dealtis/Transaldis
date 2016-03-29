@@ -463,19 +463,37 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+//NAVBAR
 .nav-pills>li{
   background-color: #94BA65;
   border-radius: 5px;
 }
 .nav-pills>li>a:hover{
   background-color: gray;
+  transition: all 1s;
+  cursor: pointer;
 }
+
 .nav-pills>li.active>a{
   background-color: #537841 !important;
   }
 .nav-pills>li>a{
   color:white;
 }
+@media (min-width: 768px){
+  .navbar-right .dropdown-menu {
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+  }
+}
+
+.navbar ul.dropdown-menu li:hover {
+  transition: all 0.35s;
+}
+
 
 
 //END GRAYSCALE
@@ -510,7 +528,7 @@ footer {
   }
 }
 #about {
-  margin-top: 75px;
+  margin-top: 105px;
 }
 /* Default view */
 .view {
@@ -548,9 +566,41 @@ footer {
 .content{
   height: 100vh;
   .introtext{
+    .introtext-text{
       margin-top: 50px;
+    }
   }
-  .rsociaux{
+  .partenaire{
     margin-top: 50px;
+    div:not(:last-child){
+      border-right: 2px solid #fff;
+    }
   }
+}
+.parallax-section{
+  height: 160px;
+}
+
+//qui sommes nous ?
+
+.histoire{
+  margin-top: 30px;
+  i{
+    color: #fff;
+    padding-left: 100px;
+  }
+}
+
+//scollbar
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
