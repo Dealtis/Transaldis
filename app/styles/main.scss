@@ -548,6 +548,13 @@ footer {
 .section-form-candidature{
   margin-top: 25px;
 }
+
+//nouvelles
+.nouvelles{
+  .media{
+    background-color: $gray;
+  }
+}
 //scollbar
 body::-webkit-scrollbar {
   width: 1em;
