@@ -35,15 +35,33 @@
     transform: none;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeInRoot {
   from {
-    opacity: 0;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
   }
 }
-
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -50%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 //ANIMATION
 .boxcontact {
   animation: slideInRight 0.7s ease;
@@ -51,19 +69,30 @@
 .actuindex {
   animation: slideInLeft 0.7s ease;
 }
-.histoire{
-  i{
+.histoire {
+  i {
     animation: slideInLeft 0.7s ease;
   }
 }
-
-.services .active {
-  p{
-
-    animation: slideInLeft 0.5s ease;
+.service {
+  animation: slideInLeft 0.7s ease;
+}
+.nosservicestabcontent {
+  .active {
+    p {
+      animation: slideInDown 0.5s ease;
+    }
   }
-  img{
-    animation: slideInRight 0.5s ease;
+}
+.btn-devis,.btn-candidature {
+  animation: slideInLeft 0.5s ease;
+}
+.servicestabscontent .active {
+  p {
+    animation: slideInLeft 0.7s ease;
+  }
+  img {
+    animation: slideInRight 0.7s ease;
   }
 }
 @media (min-width: 768px) {
@@ -71,6 +100,6 @@
     animation: slideInUpMenu 0.6s ease;
   }
 }
-// .ng-enter{
-//   animation: fadeIn 0.5s;
-// }
+.ng-enter {
+  animation: fadeInRoot 0.5s ease;
+}

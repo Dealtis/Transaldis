@@ -12,7 +12,7 @@ angular.module('transaldisAngularGruntApp')
             controller: 'ListActu'
         })
         .when('/solutions', {
-            templateUrl: 'views/not.html'
+            templateUrl: 'views/service.html'
         })
         .when('/devis', {
             templateUrl: 'views/not.html'
@@ -24,13 +24,14 @@ angular.module('transaldisAngularGruntApp')
             templateUrl: 'views/entreprise.html'
         })
         .when('/nouvelles', {
-            templateUrl: 'views/not.html'
+            templateUrl: 'views/nouvelles.html',
+            controller: 'ListActu'
         })
         .when('/medias', {
             templateUrl: 'views/not.html'
         })
         .when('/emplois', {
-            templateUrl: 'views/not.html'
+            templateUrl: 'views/emplois.html'
         })
         .when('/contact', {
             templateUrl: 'views/not.html'
