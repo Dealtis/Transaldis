@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="styles/animation.css">
     <!-- endbuild -->
     <!-- custom font -->
-    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
   </head>
   <body ng-app="transaldisAngularGruntApp">
     <!--[if lte IE 8]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
@@ -84,7 +84,8 @@
       </div>
       <!-- /.container -->
     </nav>
-    <section class="ngviewcontainer container-fluid" ng-view autoscroll="true"></section>
+    <route-loading-indicator />
+    <section class="ngviewcontainer container-fluid" ng-if='!isRouteLoading' ng-view autoscroll="true"></section>
     <!-- Footer -->
     <!-- <footer>
       <div class="container text-center">
@@ -127,10 +128,10 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/route.js"></script>
     <script src="scripts/controllers/ListActu.js"></script>
+    <script src="scripts/grayscale.js" charset="utf-8"></script>
     <!-- endbuild -->
 
     <!-- Custom JS -->
-    <script src="scripts/grayscale.js" charset="utf-8"></script>
     <script type="text/javascript">
       new WOW().init();
     </script>

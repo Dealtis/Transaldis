@@ -16,6 +16,16 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes slideInLeftBtn {
+  from {
+    transform: translate3d(-50%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 @keyframes slideInUpMenu {
   from {
     transform: translate3d(-50%, 30%, 0);
@@ -85,7 +95,7 @@
   }
 }
 .btn-devis,.btn-candidature {
-  animation: slideInLeft 0.5s ease;
+  animation: slideInLeftBtn 0.5s  ease;
 }
 .servicestabscontent .active {
   p {
