@@ -15,7 +15,7 @@ angular.module('transaldisAngularGruntApp')
             templateUrl: 'views/service.html'
         })
         .when('/devis', {
-            templateUrl: 'views/not.html'
+            templateUrl: 'views/devis.html'
         })
         .when('/suividelivraison', {
             templateUrl: 'views/not.html'
@@ -34,10 +34,17 @@ angular.module('transaldisAngularGruntApp')
             templateUrl: 'views/emplois.html'
         })
         .when('/contact', {
-            templateUrl: 'views/not.html'
+            templateUrl: 'views/contact.html'
         })
         .otherwise({
             redirectTo: '/home'
         });
     }
-]);
+])
+
+// This is the key to view transition happiness!
+.run(function ($rootScope, $document) {
+  $rootScope.$on('$routeChangeSuccess', function () {
+     $document.scrollTopAnimated(0,800)
+  });
+});

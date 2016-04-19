@@ -1,8 +1,7 @@
 // bower:scss
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
-@import "_variables.scss";
-//GRAYSCALE
+@import "_variables.scss"; //GRAYSCALE
 /*!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -129,12 +128,6 @@ a:hover {
   text-align: center;
   margin-bottom: 50px;
   color: #fff;
-  //background: url(../images/intro-bg.jpg) no-repeat bottom center scroll;
-  /*background-color: #fff;*/
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // background-size: cover;
-  // -o-background-size: cover;
 }
 .intro .intro-body {
   display: table-cell;
@@ -253,11 +246,6 @@ a:hover {
   background-repeat: no-repeat;
   position: relative;
 }
-#map {
-  width: 100%;
-  height: 200px;
-  margin-top: 100px;
-}
 @media(min-width:767px) {
   .content-section {
     padding-top: 50px;
@@ -271,10 +259,6 @@ a:hover {
   }
   .contact-section {
     padding: 50px 0;
-  }
-  #map {
-    height: 400px;
-    margin-top: 250px;
   }
 }
 h2 {
@@ -369,11 +353,23 @@ body {
 .content-index {
   background-color: white;
 }
-.boxcontact {
-  display: flex;
+.boxcontact,.infocontact {
+  display: block;
   height: 270px;
+  span {
+    font-size: 0.7em;
+  }
 }
-.boxcontact ul {
+#map {
+  width: 100%;
+  height: 172px;
+  background-color: gray;
+  margin-left: 42px;
+  margin-top: 13px;
+}
+
+.boxcontact ul,.infocontact ul {
+  text-align: left;
   list-style: none;
   margin: auto;
   font-size: 2em;
@@ -435,10 +431,12 @@ footer {
   background-color: $gray;
   color: white;
 }
-.boxcontact i {
+.boxcontact i,.infocontact i {
   color: $green;
 }
 .bgico {
+  width: 64px;
+  text-align: center;
   background-color: white;
   border-radius: 50px;
   padding: 15px;
@@ -451,26 +449,14 @@ footer {
     color: $green;
   }
 }
-#about,.nosservices,.emplois,.nouvelles{
+#about,
+.emplois,
+.nosservices,
+.nouvelles
+{
   margin-top: 105px;
 }
-/* Default view */
-.view {
-  transition: 300ms;
-}
-/* First animation*/
-.first .view.ng-enter {
-  left: -100%;
-}
-.first .view.ng-enter.ng-enter-active {
-  left: 0;
-}
-.first .view.ng-leave {
-  left: 0;
-}
-.first .view.ng-leave.ng-leave-active {
-  left: 100%;
-}
+
 .nav .open > a,
 .nav .open > a:focus,
 .nav .open > a:hover {
@@ -515,7 +501,8 @@ footer {
   }
 }
 //Services
-.btn-devis,.btn-candidature {
+.btn-candidature,
+.btn-devis {
   margin-top: 25px;
   background-color: #1D1D1B;
   padding-top: 10px;
@@ -535,25 +522,79 @@ footer {
     }
   }
 }
+
 .nosservicestabcontent {
   background-color: $gray;
   p {
     color: #fff;
   }
 }
-.section-form-devis{
+.section-form-devis {
   margin-bottom: 150px;
 }
-
+//DEVIS
+.section-devis{
+  margin-top: 105px;
+  margin-bottom: 50px;
+}
 //emplois
-.section-form-candidature{
+.section-form-candidature {
   margin-top: 25px;
 }
-
 //nouvelles
-.nouvelles{
-  .media{
+.nouvelles {
+  .media {
     background-color: $gray;
+  }
+  .thumbnail{
+    height: 500px;
+    padding: 25px;
+    .caption{
+      p{
+        max-height: 160px;
+        overflow-y: auto;
+        padding-right: 10px;
+      }
+      p::-webkit-scrollbar {
+        width: 0.5em;
+      }
+      p::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0.3);
+      }
+      p::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+    }
+  }
+  .img-nouvelle{
+    max-height: 170px;
+  }
+}
+
+//contact
+.section-contact{
+margin-top: 105px;
+}
+.btn-contact{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #1D1D1B;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  h4 {
+    font-size: 2em;
+    margin-bottom: 0;
+    color: $green;
+  }
+  a {
+    color: $green;
+    border: 2px solid $green;
+    &:hover {
+      outline: 0;
+      color: #1D1D1B;
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 //scollbar
@@ -567,3 +608,18 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+
+//ngview animated
+body {
+  position:relative;
+  height:100%;
+  width: 100%;
+}
+
+// .ngviewcontainer{
+//   position: absolute;
+//   top: 60px;
+//   z-index: 1;
+//   background: #fff;
+// }
+//

@@ -1,13 +1,11 @@
-<section class="nouvelles text-center" >
-  <div class="row" ng-repeat="actu in actus">
-    <div class="col-lg-3">
-      <img class="img img-rounded" ng-src="admin/images/{{actu.actu_imgsrc}}" alt="" height="180px"/>
-    </div>
-    <div class="page-header col-lg-8">
-      <h3 class="text-left">{{actu.actu_titre}}<small ng-bind="actu.actu_date | date:'medium'"></small></h3>
-      <p class="text-justify">
-          {{actu.actu_contenu}}
-      </p>
+<section class="nouvelles text-center">
+  <div class="thumbnail col-lg-3" ng-repeat="actu in actus">
+    <img class="img img-nouvelle" ng-src="admin/images/{{actu.actu_imgsrc}}" alt=""/>
+    <div class="caption">
+      <h3>{{actu.actu_titre}}<br>
+        <small ng-bind="actu.actu_date | date:'medium'"></small>
+      </h3>
+      <p class="text-justify">{{actu.actu_contenu}}</p>
     </div>
   </div>
 </section>
