@@ -13,5 +13,6 @@ angular
     'ngAnimate',
     'angular-parallax',
     'ngRoute',
+    'ngMaterial',
     'duScroll'
   ]);
