@@ -14,5 +14,10 @@ angular
     'angular-parallax',
     'ngRoute',
     'ngMaterial',
+    'angular-loading-bar',
     'duScroll'
-  ]);
+  ])
+  .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = false;
+    cfpLoadingBarProvider.latencyThreshold = 0;
+  }]);
