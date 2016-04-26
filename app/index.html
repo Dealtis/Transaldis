@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap-fileinput/css/fileinput.min.css" />
     <link rel="stylesheet" href="bower_components/hover/css/hover.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -66,6 +67,9 @@
                   <a href="#/entreprise" data-target="#entreprise">Qui sommes nous ?</a>
                 </li>
                 <li>
+                  <a href="#/equipe" data-target="#equipe">L'equipe</a>
+                </li>
+                <li>
                   <a href="#/nouvelles" data-target="#nouvelles">Nouvelles</a>
                 </li>
                 <li>
@@ -85,7 +89,7 @@
       </div>
       <!-- /.container -->
     </nav>
-    <section class="ngviewcontainer container-fluid" ng-view autoscroll="false"></section>    
+    <section class="ngviewcontainer container-fluid" ng-view autoscroll="false"></section>
     <!-- Footer -->
     <!-- <footer>
       <div class="container text-center">
@@ -124,6 +128,7 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -134,6 +139,7 @@
     <script src="scripts/grayscale.js" charset="utf-8"></script>
     <script src="scripts/services/actualite.js"></script>
     <script src="scripts/controllers/toast.js"></script>
+    <script src="scripts/controllers/service.js"></script>
     <!-- endbuild -->
 
     <!-- Custom JS -->

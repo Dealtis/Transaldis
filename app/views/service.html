@@ -1,55 +1,62 @@
 <section class="nosservices fullh text-center">
   <section class="row">
     <h2>NOS SOLUTIONS</h2>
-    <div class="col-lg-10 col-lg-offset-1" role="tablist">
-      <div role="presentation" class="col-lg-4 active">
-        <div class="thumbnail hvr-float-shadow">
-          <a data-target="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="images/services.jpg" alt=""></a>
-        </div>
+    <div class="services-thumbnail-wrapper container" role="tablist">
+      <div role="presentation" class="col-lg-4">
+        <a data-target="#home" aria-controls="home" role="tab" data-toggle="tab" ng-click="changeTab('home')">
+          <div class="thumbnail hvr-float-shadow messa" ng-class="tabHome">
+          </div>
+        </a>
       </div>
       <div role="presentation" class="col-lg-4">
-        <div class="thumbnail hvr-float-shadow">
-          <a data-target="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img src="images/services.jpg" alt=""></a>
-        </div>
+        <a data-target="#profile" aria-controls="profile" role="tab" data-toggle="tab" ng-click="changeTab('profile')">
+          <div class="thumbnail hvr-float-shadow affr"  ng-class="tabPro">
+          </div>
+        </a>
       </div>
       <div role="presentation" class="col-lg-4">
-        <div class="thumbnail hvr-float-shadow">
-          <a data-target="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img src="images/services.jpg" alt=""></a>
-        </div>
+        <a data-target="#messages" aria-controls="messages" role="tab" data-toggle="tab" ng-click="changeTab('messages')">
+          <div class="thumbnail hvr-float-shadow nati" ng-class="tabNat">
+          </div>
+        </a>
       </div>
     </div>
-  </section>
-  <section id="tabscontent" class="row nosservicestabcontent content-section text-center">
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="home">
-        <div class="col-lg-8 col-lg-offset-2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          </p>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="profile">
-        <div class="col-lg-8 col-lg-offset-2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          </p>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="messages">
-        <div class="col-lg-8 col-lg-offset-2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          </p>
-        </div>
+  </div>
+</section>
+<section id="tabscontent" class="row nosservicestabcontent content-section text-center">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+      <div class="col-lg-8 col-lg-offset-2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
       </div>
     </div>
-  </section>
-  <section id="form" class="row btn-devis text-center">
-    <h4>Demande de devis</h4>
-    <a du-smooth-scroll="form" du-smooth-scroll duration="500" class="btn btn-circle hvr-bounce-in">
-      <i class="fa fa-angle-double-down animated"></i>
-    </a>
-  </section>
+    <div role="tabpanel" class="tab-pane" id="profile">
+      <div class="col-lg-8 col-lg-offset-2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+      <div class="col-lg-8 col-lg-offset-2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="form" class="row btn-devis text-center">
+  <h4>Demande de devis</h4>
+  <a du-smooth-scroll="form" du-smooth-scroll duration="500" class="btn btn-circle hvr-bounce-in">
+    <i class="fa fa-angle-double-down animated"></i>
+  </a>
+</section>
 </section>
 <section class="row section-form-devis">
   <form class="form-horizontal">

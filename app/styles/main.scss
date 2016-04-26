@@ -1,24 +1,28 @@
 // bower:scss
 @import "font-awesome/scss/font-awesome.scss";
+@import "bourbon/app/assets/stylesheets/_bourbon.scss";
 // endbower
-@import "_variables.scss"; //GRAYSCALE
+@import "_variables.scss";
+
+ //GRAYSCALE
 /*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
 body {
   width: 100%;
   height: 100%;
   font-family: "Lato";
   color: #000;
   background-color: #fff;
-  //overflow:hidden;
-  overflow-x: hidden;
+
 }
 html {
   width: 100%;
   height: 100%;
+  //overflow:hidden;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -500,6 +504,10 @@ footer {
     padding-left: 100px;
   }
 }
+//equpe
+.equipe-wrapper{
+  margin-top: 150px;
+}
 //Services
 .btn-candidature,
 .btn-devis {
@@ -522,9 +530,51 @@ footer {
     }
   }
 }
-
+.services-thumbnail-wrapper{
+  .messa{
+    width : 340px;
+    height: 191px;
+    background-image: url("../images/Messagerie.png");
+    @include transition(all 0.5s ease);
+    &:hover{
+      background-image: url("../images/Messagerie_hover.png");
+    }
+    &.tab-active{
+      background-image: url("../images/Messagerie_hover.png");
+    }
+  }
+  .affr{
+    width : 340px;
+    height: 191px;
+    background-image: url("../images/Affretement.png");
+    @include transition(all 0.5s ease);
+    &:hover{
+      background-image: url("../images/Affretement_hover.png");
+    }
+    &.tab-active{
+      background-image: url("../images/Affretement_hover.png");
+    }
+  }
+  .nati{
+    width : 340px;
+    height: 191px;
+    background-image: url("../images/National.png");
+    @include transition(all 0.5s ease);
+    &:hover{
+      background-image: url("../images/National_hover.png");
+    }
+    &.tab-active{
+      background-image: url("../images/National_hover.png");
+    }
+  }
+  .tab-active{
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 .nosservicestabcontent {
   background-color: $gray;
+  @include transition(all 0.5s ease);
   p {
     color: #fff;
   }
@@ -574,7 +624,7 @@ footer {
 
 //contact
 .section-contact{
-margin-top: 105px;
+  margin-top: 105px;
 }
 .btn-contact{
   margin-top: 30px;

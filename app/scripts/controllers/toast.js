@@ -18,7 +18,7 @@ angular.module('transaldisAngularGruntApp')
         templateUrl: 'views/toasttemplate.html'
       });
     };
-    $scope.showToast();
+    //$scope.showToast();
   }).controller('ToastTemplateCtrl', function($scope, $mdToast, $mdDialog) {
     $scope.closeToast = function() {
       if (isDlgOpen) return;
