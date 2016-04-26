@@ -1,9 +1,9 @@
 angular.module('transaldisAngularGruntApp')
-.controller('ListActu', ['$scope', '$http', 'actualite', '$window', function($scope, $http, actualite, $window) {
+.controller('ListActu', function($scope, $http, actualite, $window,actualite) {
   $scope.actus = [];
-  $http.get('http://localhost/angular/Transaldis_Angular_Grunt/app/admin/api/api.php/actualite/?order=actu_id,desc&transform=1')
-  .success(function(data) {
-    $scope.actus = data.actualite;
+  $scope.actus = actualite.loadActualite()
+  .then(function(response) {
+    $scope.actus = response.data;
   });
 
   if ($window.innerHeight < 940) {
@@ -25,4 +25,4 @@ angular.module('transaldisAngularGruntApp')
       }
     });
   });
-}]);
+});
