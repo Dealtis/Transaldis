@@ -3,7 +3,7 @@ angular.module('transaldisAngularGruntApp')
   $scope.actus = [];
   $scope.actus = actualite.loadActualite()
   .then(function(response) {
-    $scope.actus = response.data;
+    $scope.actus = response.data.actualite;
   });
 
   if ($window.innerHeight < 940) {
