@@ -6,6 +6,7 @@ angular.module('transaldisAngularGruntApp')
     $scope.actus = response.data.actualite;
   });
 
+  //$scope.actus = actualite.loadActuFirebase();
   if ($window.innerHeight < 940) {
     $scope.numberActu = 3;
     console.log($window.innerHeight);
