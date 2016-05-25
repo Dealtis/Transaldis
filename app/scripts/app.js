@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngMaterial',
     'angular-loading-bar',
-    'duScroll'
+    'duScroll',
+    'firebase'
   ])
   .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = false;

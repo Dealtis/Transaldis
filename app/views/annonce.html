@@ -1,0 +1,11 @@
+<section class="container annonce-wrapper">
+  <md-list>
+      <md-list-item class="md-3-line" ng-repeat="annonce in annonces">
+        <div class="md-list-item-text">
+          <h3>{{annonce.titre}}</h3>
+          <p>{{annonce.desc}}</p>
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-list>
+</section>

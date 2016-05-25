@@ -40,6 +40,10 @@ angular.module('transaldisAngularGruntApp')
         .when('/contact', {
             templateUrl: 'views/contact.html'
         })
+        .when('/annonces', {
+            templateUrl: 'views/annonce.html',
+              controller: 'AnnonceCtrl'
+        })
         .otherwise({
             redirectTo: '/home'
         });
