@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('transaldisAngularGruntApp')
 .config(['$routeProvider',
     function($routeProvider) {

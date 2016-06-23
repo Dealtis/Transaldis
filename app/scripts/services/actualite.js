@@ -8,7 +8,9 @@
  * Service in the transaldisAngularGruntApp.
  */
 angular.module('transaldisAngularGruntApp')
-  .service('actualite', function () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-    
+  .service('actualite', function ($http) {
+    var url = 'http://51.254.101.196/transaldis/api/api.php';
+    this.loadActualite = function (idsoc) {
+      return $http.get(url+'/actualite?transform=1');
+    };
   });

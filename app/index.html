@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="bower_components/hover/css/hover.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/please-wait/build/please-wait.css" />
+    <link rel="stylesheet" href="bower_components/SpinKit/css/spinkit.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -28,67 +30,69 @@
   <body ng-app="transaldisAngularGruntApp" ng-controller="ToastCtrl">
     <!--[if lte IE 8]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
-          <a class="navbar-brand page-scroll" href="#/home">
-            <img src="images/logo_transaldis.png" alt="" height="35px"/>
-          </a>
+    <div class="container-fluid">
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#/home">
+              <img src="images/logo_transaldis.png" alt="" height="35px"/>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+              <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#/solutions" data-target="#solutions">Nos solutions</a>
+                  </li>
+                  <li>
+                    <a href="#/devis" data-target="#devis">Demande de devis</a>
+                  </li>
+                  <li>
+                    <a href="http://10.1.2.67/CLT/LOGINFRM.asp" target="_blank">Suivi de livraison</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entreprise
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#/entreprise" data-target="#entreprise">Qui sommes nous ?</a>
+                  </li>
+                  <li>
+                    <a href="#/equipe" data-target="#equipe">L'equipe</a>
+                  </li>
+                  <li>
+                    <a href="#/nouvelles" data-target="#nouvelles">Nouvelles</a>
+                  </li>
+                  <li>
+                    <a href="#/medias" data-target="#medias">Médias</a>
+                  </li>
+                  <li>
+                    <a href="#/emplois" data-target="#emplois">Emplois</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#/contact" data-target="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#/solutions" data-target="#solutions">Nos solutions</a>
-                </li>
-                <li>
-                  <a href="#/devis" data-target="#devis">Demande de devis</a>
-                </li>
-                <li>
-                  <a href="http://10.1.2.67/CLT/LOGINFRM.asp" target="_blank">Suivi de livraison</a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entreprise
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#/entreprise" data-target="#entreprise">Qui sommes nous ?</a>
-                </li>
-                <li>
-                  <a href="#/equipe" data-target="#equipe">L'equipe</a>
-                </li>
-                <li>
-                  <a href="#/nouvelles" data-target="#nouvelles">Nouvelles</a>
-                </li>
-                <li>
-                  <a href="#/medias" data-target="#medias">Médias</a>
-                </li>
-                <li>
-                  <a href="#/emplois" data-target="#emplois">Emplois</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#/contact" data-target="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-    </nav>
+        <!-- /.container -->
+      </nav>
+    </div>
     <section class="ngviewcontainer container-fluid" ng-view autoscroll="false"></section>
     <!-- Footer -->
     <!-- <footer>
@@ -113,7 +117,7 @@
       ga('create', 'UA-XXXXX-X');
       ga('send', 'pageview');
     </script>
-
+    <script src='http://maps.googleapis.com/maps/api/js'></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -131,6 +135,15 @@
     <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/please-wait/build/please-wait.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+    <script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+    <script src="bower_components/js-rich-marker/src/richmarker.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

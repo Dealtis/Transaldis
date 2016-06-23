@@ -5,7 +5,7 @@
       <source src="video/10149872.mp4" type="video/mp4"/>
     </video>
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-2 col-xs-offset-2">
         <h1 class="brand-heading">Transaldis</h1>
         <p class="intro-text">Qui sommes nous ?</p>
         <a du-smooth-scroll="content" du-smooth-scroll duration="500" class="btn btn-circle hvr-bounce-in">
@@ -21,16 +21,12 @@
       <div class="col-lg-6 col-lg-offset-1 col-md-8">
         <h2>Présentation</h2>
         <p>
-          TRANSALDIS, c'est plus de 22 ans à votre service. Une PME créée en 1993 située dans l’est parisien à MITRY MORY, à proximité de ROISSY CDG et accessible par les grands axes routiers. L’Entreprise, par ses différents métiers développés au sein
-          même de son site, est capable de répondre à tous les besoins en transport et logistique de sa Clientèle sur l’ensemble du territoire national. Transporteur et Organisateur de transport, nous offrons un rôle de conseil à la mise en place de prestation
-          dédiée.
+          TRANSALDIS, c'est plus de 22 ans à votre service. Une PME créée en 1993 située dans l’est parisien à MITRY MORY, à proximité de ROISSY CDG et accessible par les grands axes routiers. L’Entreprise, par ses différents métiers développés au sein même de
+          son site, est capable de répondre à tous les besoins en transport et logistique de sa Clientèle sur l’ensemble du territoire national. Transporteur et Organisateur de transport, nous offrons un rôle de conseil à la mise en place de prestation dédiée.
         </p>
       </div>
       <div class="col-lg-4">
         <blockquote>
-          <p>
-            <strong>La maitrise des fluxs</strong>
-          </p>
           <p>
             <i>
               Il n'y a pas de limite à ce que nous pouvons faire ensemble, chacun de nous transporte en soi le centre de l'univers.</i><br>Nancy HUSTON</p>
@@ -66,7 +62,11 @@
             <i class="fa fa-map-marker bgico" aria-hidden="true"></i>&nbsp;<span>Rue Charles de Coulomb, 77290 Mitry-Mory</span>
           </li>
         </ul>
-        <div id="map"></div>
+        <div id="map">
+          <ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'>
+            <ui-gmap-marker coords="map.markerHome.coords" options="map.markerHome.options" idkey="map.markerHome.id"></ui-gmap-marker>
+          </ui-gmap-google-map>
+        </div>
       </div>
     </div>
   </section>

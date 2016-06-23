@@ -3,12 +3,6 @@
 @import "bourbon/app/assets/stylesheets/_bourbon.scss";
 // endbower
 @import "_variables.scss";
-//GRAYSCALE
-/*!
-* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
-* Code licensed under the Apache License v2.0.
-* For details, see http://www.apache.org/licenses/LICENSE-2.0.
-*/
 body {
   width: 100%;
   height: 100%;
@@ -41,7 +35,7 @@ p {
 }
 @media(min-width:768px) {
   p {
-    margin: 0 0 0px;
+    margin: 0;
     font-size: 20px;
     line-height: 1.6;
   }
@@ -154,14 +148,25 @@ a:hover {
     font-size: 26px;
   }
 }
+
+@media(max-width:768px) {
+  .intro-body{
+    background-image: url('../images/backgr.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    video{
+      display: none;
+    }
+  }
+}
+
 .btn-circle {
-  width: 70px;
-  height: 70px;
   margin-top: 15px;
   padding: 7px 16px;
   border: 2px solid #fff;
-  border-radius: 100%!important;
-  font-size: 40px;
+  /* border-radius: 100% !important; */
+  font-size: 3vh;
   color: #fff;
   background: 0 0;
   -webkit-transition: background 0.3s ease-in-out;
@@ -361,12 +366,11 @@ body {
   height: 270px;
   span {
     font-size: 0.7em;
+    color: white;
   }
 }
 #map {
   width: 100%;
-  height: 172px;
-  background-color: gray;
   margin-left: 42px;
   margin-top: 13px;
 }
@@ -480,10 +484,10 @@ footer {
     .introtext-text {
       margin-top: 50px;
     }
-  blockquote{
-    margin-top: 70px;
-  }
+    blockquote {
+      margin-top: 70px;
     }
+  }
   .partenaire {
     margin-top: 50px;
     div:not(:last-child) {
@@ -505,7 +509,6 @@ footer {
     padding-left: 100px;
   }
 }
-
 //equpe
 .equipe-wrapper {
   margin-top: 150px;
@@ -518,7 +521,7 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
   h4 {
-    font-size: 2em;
+    font-size: 1vw;
     margin-bottom: 0;
     color: $green;
   }
@@ -532,46 +535,145 @@ footer {
     }
   }
 }
-.services-thumbnail-wrapper {
-  .messa {
-    width: 340px;
-    height: 191px;
-    background-image: url("../images/Messagerie.png");
-    @include transition(all 0.5s ease);
-    &:hover {
-      background-image: url("../images/Messagerie_hover.png");
-    }
-    &.tab-active {
-      background-image: url("../images/Messagerie_hover.png");
+.services-wrapper {
+  height: 70vh;
+  .service-aside {
+    height: 100%;
+  }
+  .services-btn {
+    height: 100%;
+    .row.category {
+      height: 33.33%;
+      display: table;
+      width: 100%;
+      background-color: $gray;
+      &.active {
+        border: 7px solid #1D1D1B;
+      }
+      .container-fluid {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      a {
+        // display: table-cell;
+        // vertical-align: middle;
+      }
+      .service-btn-left {
+        a {
+          display: table-cell;
+          vertical-align: middle;
+          font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          font-weight: 700;
+          color: $green;
+          font-size: 1.7em;
+        }
+        h3 {
+          font-size: 1vw;
+        }
+      }
+      .service-btn-right {
+        //margin-top: 15px;
+        .row {
+          text-align: left;
+          padding-left: 15px;
+          a {
+            font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-weight: 700;
+            font-size: 1vw;
+            color: white;
+            cursor: pointer;
+            &.tab-active::after {
+              content: ' <';
+              color: $green;
+            }
+            &.tab-active {
+              color: $green;
+            }
+            &.tabProduiDang {
+              font-size: 0.9vw;
+            }
+          }
+        }
+      }
     }
   }
-  .affr {
-    width: 340px;
-    height: 191px;
-    background-image: url("../images/Affretement.png");
-    @include transition(all 0.5s ease);
-    &:hover {
-      background-image: url("../images/Affretement_hover.png");
+  .service-switch {
+    height: 99.99%;
+    .inner {
+      height: 100%;
+      background-color: $gray;
+      .switch-wrapper-left {
+        height: 100%;
+        &.idf {
+          background-image: url("../images/photo-1422908132590-117a051fc5cd.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.stj {
+          background-image: url("../images/photo-1.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.mailnat {
+          background-image: url("../images/photo-2.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.stockage {
+          background-image: url("../images/photo-3.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.produitdangereux {
+          background-image: url("../images/photo-4.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.production {
+          background-image: url("../images/photo-5.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.tracabilite {
+          background-image: url("../images/photo-citron.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.dms {
+          background-image: url("../images/photo-citron.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.edi {
+          background-image: url("../images/photo-citron.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .switch-wrapper-right {
+        display: table;
+        height: 100%;
+        .inner {
+          padding: 3vw;
+          display: table-cell;
+          vertical-align: middle;
+          p {
+            text-align: justify;
+            color: white;
+            font-size: 1.2vw;
+          }
+        }
+      }
     }
-    &.tab-active {
-      background-image: url("../images/Affretement_hover.png");
-    }
-  }
-  .nati {
-    width: 340px;
-    height: 191px;
-    background-image: url("../images/National.png");
-    @include transition(all 0.5s ease);
-    &:hover {
-      background-image: url("../images/National_hover.png");
-    }
-    &.tab-active {
-      background-image: url("../images/National_hover.png");
-    }
-  }
-  .tab-active {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
   }
 }
 .nosservicestabcontent {
@@ -648,17 +750,6 @@ footer {
     }
   }
 }
-//scollbar
-// body::-webkit-scrollbar {
-//   width: 1em;
-// }
-// body::-webkit-scrollbar-track {
-//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-// }
-// body::-webkit-scrollbar-thumb {
-//   background-color: darkgrey;
-//   outline: 1px solid slategrey;
-// }
 //ngview animated
 body {
   position: relative;
@@ -685,23 +776,36 @@ md-toast {
   }
 }
 //media
-
-.media-wrapper{
+.media-wrapper {
   margin-top: 150px;
 }
 md-grid-list {
-  margin: 8px; }
+  margin: 8px;
+}
 .gray {
-  background: #f5f5f5; }
+  background: #f5f5f5;
+}
 .green {
-  background: #b9f6ca; }
+  background: #b9f6ca;
+}
 .yellow {
-  background: #ffff8d; }
+  background: #ffff8d;
+}
 .blue {
-  background: #84ffff; }
+  background: #84ffff;
+}
 .purple {
-  background: #b388ff; }
+  background: #b388ff;
+}
 .red {
-  background: #ff8a80; }
+  background: #ff8a80;
+}
 md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
+  transition: all 400ms ease-out 50ms;
+}
+.hfull {
+  height: 100%;
+}
+.angular-google-map-container {
+  height: 10vw;
+}

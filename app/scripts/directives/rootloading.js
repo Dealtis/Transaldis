@@ -1,3 +1,6 @@
+'use strict';
+
+
 var routeLoadingIndicator = function($rootScope){
   return {
     restrict:'E',

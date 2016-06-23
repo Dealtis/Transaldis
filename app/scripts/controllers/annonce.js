@@ -10,5 +10,4 @@
 angular.module('transaldisAngularGruntApp')
   .controller('AnnonceCtrl', function ($scope,annonce) {
     $scope.annonces = annonce.loadAnnonce();
-
   });

@@ -8,9 +8,7 @@
  * Service in the transaldisAngularGruntApp.
  */
 angular.module('transaldisAngularGruntApp')
-  .service('annonce', function ($firebaseArray) {
+  .service('annonce', function () {
     this.loadAnnonce = function () {
-      var ref = new Firebase("https://blazing-fire-1585.firebaseio.com/annonces");
-      return $firebaseArray(ref);
-    }
+        }
   });

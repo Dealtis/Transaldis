@@ -1,62 +1,210 @@
 <section class="nosservices fullh text-center">
-  <section class="row">
-    <h2>NOS SOLUTIONS</h2>
-    <div class="services-thumbnail-wrapper container" role="tablist">
-      <div role="presentation" class="col-lg-4">
-        <a data-target="#home" aria-controls="home" role="tab" data-toggle="tab" ng-click="changeTab('home')">
-          <div class="thumbnail hvr-float-shadow messa" ng-class="tabHome">
+  <div class="container-fluid services-wrapper">
+    <div class="row service-aside">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 services-btn  text-center">
+        <div class="row category">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-5 col-md-12 service-btn-left">
+                <h3>Transport routier</h3>
+              </div>
+              <div class="col-lg-7 col-md-12 hfull service-btn-right">
+                <div class="row">
+                  <a data-target="#idf" aria-controls="idf" role="tab" data-toggle="tab" ng-click="changeTab('idf')" ng-class="tabIdf">IDF</a>
+                </div>
+                <div class="row">
+                  <a data-target="#stj" aria-controls="stj" role="tab" data-toggle="tab" ng-click="changeTab('stj')" ng-class="tabStj">GROUPE STJ</a>
+                </div>
+                <div class="row">
+                  <a data-target="#mailnat" aria-controls="mailnat" role="tab" data-toggle="tab" ng-click="changeTab('mail')" ng-class="tabMail">NATIONAL</a>
+                </div>
+                <div class="row">
+                  <a data-target="#conv" aria-controls="conv" role="tab" data-toggle="tab" ng-click="changeTab('conv')" ng-class="tabConv">CONVOYAGE</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
+        <div class="row category">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-5 service-btn-left">
+                <h3>Logistique</h3>
+              </div>
+              <div class="col-lg-7 hfull service-btn-right">
+                <div class="row">
+                  <a data-target="#stockage" aria-controls="stockage" role="tab" data-toggle="tab" ng-click="changeTab('stock')" ng-class="tabStock">STOCKAGE</a>
+                </div>
+                <div class="row">
+                  <a class="tabProduiDang" data-target="#produitdangereux" aria-controls="produitdangereux" role="tab" data-toggle="tab" ng-click="changeTab('produi')" ng-class="tabProdui">PRODUIS DANGEREUX</a>
+                </div>
+                <div class="row">
+                  <a data-target="#production" aria-controls="production" role="tab" data-toggle="tab" ng-click="changeTab('produc')" ng-class="tabProduct">PRODUCTION</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row category">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-5 service-btn-left">
+                <h3>Production et contrôle</h3>
+              </div>
+              <div class="col-lg-7 hfull service-btn-right">
+                <div class="row">
+                  <a data-target="#tracabilite" aria-controls="tracabilite" role="tab" data-toggle="tab" ng-click="changeTab('traca')" ng-class="tabTrac">TRACABILITE</a>
+                </div>
+                <div class="row">
+                  <a data-target="#dms" aria-controls="dms" role="tab" data-toggle="tab" ng-click="changeTab('dms')" ng-class="tabDms">DMS</a>
+                </div>
+                <div class="row">
+                  <a data-target="#edi" aria-controls="edi" role="tab" data-toggle="tab" ng-click="changeTab('edi')" ng-class="tabEdi">EDI</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div role="presentation" class="col-lg-4">
-        <a data-target="#profile" aria-controls="profile" role="tab" data-toggle="tab" ng-click="changeTab('profile')">
-          <div class="thumbnail hvr-float-shadow affr"  ng-class="tabPro">
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 service-switch">
+        <!-- contenu switch slide -->
+        <div class="tab-content hfull">
+          <div role="tabpanel" class="tab-pane hfull active" id="idf">
+            <div class="inner">
+              <div class="switch-wrapper-left idf col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8 ">
+                <div class="inner">
+
+                  <p>
+                    Leader en Ile de France de la distribution de matières dangereuses / déchets et spécialiste de la livraison palettes, TRANSALDIS livre ou prend en charge chaque jour environ 1000 palettes. La parfaite connaissance du terrain permet d’assurer des
+                    livraisons dans les délais demandés. La croissance grandissante du « juste à temps »nous pousse à offrir des livraisons plus fréquentes sur les envois de plus petite taille. Un parc de x véhicules récents dotés de hayons élévateurs et équipés en 100%
+                    ADR Xxxxxx tournées journalières Qui sont nos Clients : Industriels – chimiquiers – industrie pharmaceutique – produits d’hygiène - Plateforme – grandes enseignes etc…..
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </a>
-      </div>
-      <div role="presentation" class="col-lg-4">
-        <a data-target="#messages" aria-controls="messages" role="tab" data-toggle="tab" ng-click="changeTab('messages')">
-          <div class="thumbnail hvr-float-shadow nati" ng-class="tabNat">
+          <div role="tabpanel" class="tab-pane hfull" id="stj">
+            <div class="inner">
+              <div class="switch-wrapper-left stj col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6  col-md-8">
+                <div class="inner">
+                  <p>
+                    Présent depuis 1948, plus de 68 ans de passion Le Groupe STJ est un réseau constitué de plusieurs Entreprises de transport qui représente + 600 collaborateurs +750 cartes grises 10 plateformes dans l’hexagone pour 70 000 m² d’entrepôts sécurisés et
+                    spécialisés ADR Réseau national, messagerie, palette, lots et affrètement.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </a>
+          <div role="tabpanel" class="tab-pane hfull" id="mailnat">
+            <div class="inner">
+              <div class="switch-wrapper-left mailnat col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8">
+                <div class="inner">
+                  <p>
+                    STJ TRANSALDIS s’appuie sur le Groupe STJ afin de couvrir le territoire national dans sa totalité. C’est la garantie, du respect des délais, de la réduction des couts et aussi une contribution à l’amélioration de l’environnement. Mettre carte zonée
+                    Les livraisons garanties en 24h Une Equipe passionnée et à votre écoute
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="conv">
+            <div class="inner">
+              <div class="switch-wrapper-left stj col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8">
+                <div class="inner">
+                  <p>
+                    Mise à disposition de services dédiés Récemment intégré dans la structure, nous développons le convoyage. Des demandes multiples nous orientent à diffuser notre savoir-faire au travers de l’organisation technique du convoyage. Cette prestation dédiée
+                    nous conforte dans notre « rôle » de conseiller d’organisateur de transport. La location de véhicule avec chauffeur
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="stockage">
+            <div class="inner">
+              <div class="switch-wrapper-left stockage col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8">
+                <div class="inner">
+                  <p>
+                    STJ TRANSALDIS offre une capacité de stockage de 5 500m² Un site entièrement clos et sécurisé L’entrepôt est en capacité d’entreposer des produits dangereux et déchets
+                  </p>
+                  <ul>
+
+                    <li>Bâtiment sécurisé (télésurveillance et vidéosurveillance)</li>
+
+                    <li>Quais niveleurs</li>
+
+                    <li>Rampe d’accès de plein pied (pour les petits envois)</li>
+
+                    <li>Cross dock</li>
+
+                    <li>Réception sur palette</li>
+
+                    <li>Réception de conteneurs avec mise sur palette</li>
+
+                    <li>La gestion des stocks, des bulletins d’analyse (FIFO, étiquetage, suivi informatique)</li>
+
+                    <li>Préparation de commande avec lecture optique code barre (palette homogène ou préparation au colis)</li>
+
+                    <li>La réexpédition des marchandises en temps réel</li>
+
+                    <li>Cage de sûreté</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="produitdangereux">
+            <div class="inner">
+              <div class="switch-wrapper-left produitdangereux col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8"></div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="production">
+            <div class="inner">
+              <div class="switch-wrapper-left production col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8">
+                <div class="inner">
+                  <p>
+                    Garantie suivi et traçabilité Tracking en direct Par son interface web sécurisé vous pouvez suivre en temps réel l’évolution de vos livraisons permettant d’anticiper vos gestions de flux. Lors de chaque livraison, les réceptions sont confirmées par
+                    la validation via l’outil DMS par le chauffeur. Vos commandes en « LIVE » - Vos commandes directement déposées sur la station chargeur, avec transmission en simultanée. - Vos commandes envoyées par EDI , simple et efficace Choisissez vous-même votre
+                    méthode de travail avec nos collaborateurs Une flexibilité naturelle a adapté à vos besoins.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="tracabilite">
+            <div class="inner">
+              <div class="switch-wrapper-left tracabilite col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8"></div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="dms">
+            <div class="inner">
+              <div class="switch-wrapper-left dms col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8"></div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane hfull" id="edi">
+            <div class="inner">
+              <div class="switch-wrapper-left edi col-lg-6 col-md-4"></div>
+              <div class="switch-wrapper-right col-lg-6 col-md-8"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<section id="tabscontent" class="row nosservicestabcontent content-section text-center">
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
-      <div class="col-lg-8 col-lg-offset-2">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="profile">
-      <div class="col-lg-8 col-lg-offset-2">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="messages">
-      <div class="col-lg-8 col-lg-offset-2">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales tortor ut ipsum placerat fermentum. Morbi viverra dui urna, sit amet faucibus urna tempor eget. Nullam pretium congue libero et semper. Sed sodales ultrices sem vel consectetur. In pharetra eleifend luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
-      </div>
-    </div>
+  <div id="form" class="row btn-devis text-center">
+    <h4>Demande de devis</h4>
+    <a du-smooth-scroll="form" du-smooth-scroll duration="500" class="btn btn-circle hvr-bounce-in">
+      <i class="fa fa-angle-double-down animated"></i>
+    </a>
   </div>
-</section>
-<section id="form" class="row btn-devis text-center">
-  <h4>Demande de devis</h4>
-  <a du-smooth-scroll="form" du-smooth-scroll duration="500" class="btn btn-circle hvr-bounce-in">
-    <i class="fa fa-angle-double-down animated"></i>
-  </a>
-</section>
 </section>
 <section class="row section-form-devis">
   <form class="form-horizontal">
@@ -85,7 +233,9 @@
         <label class="col-md-4 control-label" for="prependedtext">Lieux</label>
         <div class="col-md-4">
           <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
+            <span class="input-group-addon">
+              <i class="fa fa-location-arrow"></i>
+            </span>
             <input id="prependedtext" name="prependedtext" class="form-control" placeholder="placeholder" type="text">
           </div>
         </div>
